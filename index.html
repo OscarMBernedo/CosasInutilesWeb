@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CosasInútilesSL</title>
+    <meta charset="UTF-8">
+    <!-- CORRECCIÓN: Se quitó el ../ -->
+    <link rel="stylesheet" href="CSS/mystyle.css">
+    <style>
+        p::first-letter {
+            font-weight: bold;
+        }
+        ul {
+            /*list-style-type: none; */
+        }
+    </style>
+</head>
+
+<header>
+    <h1>Cosas Inútiles S.L</h1>
+</header>
+
+<body id="indexbody" onload="inicializarModoOscuro()">
+
+    <div class="background-container">
+    
+        <img src="Image/backgroundDay.jpg" alt="There's no background :()">
+    </div>
+    <h2>Welcome to the <strong>BEST</strong> shop</h2>
+    <p>Your <mark>one-stop</mark> destination for all your needs.</p>
+
+    <nav class="navbar">
+        <h3>Our links</h3>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="customer.html">Customer</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+    </nav>
+</body>
+
+<footer>
+    <a href="cart.html" target="_blank">
+        <img id="cartImage" src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Cart" width="50px" height="50px">
+    </a>
+    <div>Check the cart!</div>
+    <p>&copy; Home of the Book</p>
+    <button id="toggleDarkMode" onclick="">Toggle Dark Mode</button>
+</footer>
+
+<script defer src="JavaScript/cart.js"></script>
+<script defer src="JavaScript/darkMode.js"></script>
+</html>
