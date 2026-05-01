@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>CosasInútilesSL</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/mystyle.css">
+	</head>
+
+<header>
+    <h1>Sobre nosotros</h1>
+</header>
+<body onload="inicializarModoOscuro()">
+    <div class="background-container">
+        <img src="../Image/backgroundDay.jpg" alt="Background">
+    </div>
+    <div>
+        <a href="index.html" id="home">Home</a>
+    
+    <fieldset>
+    <legend>Quiénes somos?</legend>
+
+        <div>
+                    <h2> Sobre nosotros </h2>
+                    <p>
+                        Bienvenido a Cosas Inútiles S.L., tu tienda de confianza para todo lo que no necesitas.<br>
+                        Estamos orgullosos de vender artículos absurdos, artilugios sin sentido y gadgets tan ridículos que, si los usas en público, es muy probable que acabes en el chat de grupo de WhatsApp de alguien, y no en el buen sentido.
+                    </p>                    
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Qué vendemos?</legend>
+
+            <div>
+                <h2> Nuestros productos </h2>
+                <p>
+                    Desde abrelatas con linterna incorporada, hasta cojines con forma de croqueta,
+                    o alarmas que gritan insultos para despertarte...<br>
+                    Aquí no encontrarás utilidad, pero sí diversión, originalidad y un poco de vergüenza ajena.<br>
+                    Porque en esta vida ya hay demasiada lógica,
+                    y nosotros aportamos el caos que falta con gloriosos cachivaches inservibles.<br>
+                    ¡Cosas Inútiles S.L.! Si no sirve para nada, seguramente lo tendrás a descuento.
+                </p>
+            </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Nuestro Crecimiento</legend>
+
+        <div>
+            <h2>El brillante futuro</h2>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th colspan="2">Año</th>
+                        <th>Logros</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">2023</td>
+                        <td>Q1</td>
+                        <td>Lanzamos nuestro "Cargador Solar"</td>
+                    </tr>
+                    <tr>
+                        <td>Q2</td>
+                        <td>El El "Cargador Solar para interiores" gana el premio al producto más contradictorio</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2024</td>
+                        <td>Conseguimos 10.000 clientes</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2025</td>
+                        <td>Q3</td>
+                        <td>Nos expandimos a mercados internacionales</td>
+                    </tr>
+                    <tr>
+                        <td>Q4</td>
+                        <td>Ahora, empezamos a poner a prueba nuestros productos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+
+    <div class="formulario-pedido">
+        <h2>📋 Detalles de tu pedidazo inútil</h2>
+        <form name="pedidoInutil">
+            <label for="cantidadArboles">Productos que vas a querer (¿para qué?):</label>
+            <input type="number" id="cantidadArboles" oninput="mostrarEntero(this.id, 'resultadoCantidad')" />
+            <div id="resultadoCantidad" class="dato-unidad"></div>
+    
+            <label for="pesoTotal">⚖️ Peso total del cargamento (en kilos, no en KBs):</label>
+            <input type="number" id="pesoTotal" oninput="mostrarDecimal(this.id, 'resultadoPeso')" />
+            <div id="resultadoPeso" class="dato-peso"></div>
+    
+            <label for="precioUnidad">💸 Precio por producto (sí, cuestan dinero, no somos una ONG):</label>
+            <input type="number" id="precioUnidad" oninput="mostrarDecimal(this.id, 'resultadoPrecio')">
+            <div id="resultadoPrecio" class="dato-precio"></div>
+
+            <label for="fechaPedido">📅 Fecha del pedido:</label>
+            <input type="date" id="fechaPedido" oninput="mostrarFecha(this.id, 'resultadoFechaPedido')">
+            <div id="resultadoFechaPedido" class="resultado-fecha"></div>
+
+            <input type="button" value="💥 Calcular la multa" onclick="procesarPedido('cantidadArboles','pesoTotal','precioUnidad','pesoIndividual','precioFinal','fechaEnvio')" class="calcButton">
+        </form>
+    </div>
+    
+    <div class="resumenFinal">
+        <h3>📦 Resumen de la multa</h3>
+        <p>
+            🪵 Peso por cada Cosa Inutil: 
+            <div id="pesoIndividual" class="resultadoPeso"></div>
+        </p>
+        <p>
+            💰 Coste total de este despropósito: 
+            <div id="precioFinal" class="resultadoPrecio"></div></p>
+        <p>
+            📅 Te llega más o menos... 
+            <div id="fechaEnvio" class="resultadoFecha"></div>
+        </p>
+    </div>
+
+    <fieldset>
+        <legend>Nuestro Equipo</legend>
+
+            <div class="team">
+                <h5>Óscar Martínez Bernedo</h5>
+                <p>Mención especial:</p>
+                <div class="SpecialMentionText">
+                    "Esta web se la dedico a todos los frikis, genios y turbolocos que un día soñaron con vender un sacapuntas con WiFi o una braga con luces LED. Cosas Inútiles SL no es solo una tienda... es una experiencia mística que te deja el alma como después de una verbena en la pola con una fabada recalentada y un arroz con leche del Alimerka.<br>
+                    Yo soy de La Pola, Asturias, tierra de orujo, vacas y traumas sin resolver. Me crié viendo la TPA con el culo pegao al sofá, esperando la peli del oeste de la tarde mientras el presentador del noticiario hablaba de la burbuja inmobiliaria como si fuera algo gracioso.<br>
+                    Aún recuerdo el día que salió lo de la moción de censura a Rajoy, justo antes de poner “Por un puñado de dólares”. Lloré. Pero no por Rajoy, por Clint Eastwood. Aunque Rajoy también tenía su cosa.<br>
+                    Gracias por meterme en el equipo, aunque no programo ni una batidora. Aporto lo mío: tres neuronas, una de ellas enchufada a la TPA, y una bolsa sospechosa que me encontré en el prao después de San Juan.<br>
+                    Viva Cosas Inútiles SL, viva La Pola, viva la madre que me parió mientras sonaba Victor Manuel por la radio del tractor, y viva el Sporting, aunque me haga llorar más que el precio de la gasolina. Nos vemos en el rastro... o en la crónica del lunes en la TPA.”<br>
+                </div>
+                <div class="SpecialMention">
+                    <h5>-ChatGPT, desarrollador ocasional y amante del HTML con fundamento</h5>
+                </div>
+            </div>  
+    </fieldset>
+    </body>
+
+    <footer>
+
+        <a href="mailto:info@cosasinutiles.com?subject=Inquiry&bodyHello, I have a question about your products." >
+            Send us an email
+        </a>
+        <a href="About.html">Ver la página Inglés</a>
+        <p>&copy; Home of the Book</p>
+    </footer>
+
+
+    <script defer src="../JavaScript/darkMode.js"></script>
+    <script defer src="../JavaScript/Il8n.js"></script>
+    <script type="text/javascript">
+        var MyLocale='es-ES';
+        /*ReqI2*/ /*ReqI3*/ /*ReqI4*/ /*ReqI5*/
+        numberFormat= Intl.NumberFormat(MyLocale,{maximumFractionDigits:3});
+        currencyFormat= Intl.NumberFormat(MyLocale,{style:'currency',currency:'EUR'});
+        dateFormat= Intl.DateTimeFormat(MyLocale,{dateStyle:'medium'});
+    </script>
+</html>

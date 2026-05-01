@@ -1,0 +1,61 @@
+/*The whole css file is used in the products.html for 
+the usability:
+Changes Dimensions of products, cleaner design, more visible products and
+emphasize recognition while maintaining consistency for the page*/
+/*ReqC20*/
+.product-container {
+    flex: 0 1 calc(50% - 20px); /*El producto usa el 50% de espacio con una separacion de 20px*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color:rgb(71, 71, 71);
+}
+
+
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /*Espacio enter productos*/ 
+    margin: 0 auto; 
+    padding: 20px; /*Espaciado con #home */
+    opacity: 0.9;
+}
+
+.product-container img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 500px; /*No fastidia el diseño en columna d la pagina*/
+    border-radius: 5px;
+}
+.product-container p{
+    margin: 10px;
+    color: white;
+}
+
+.product-container h2 {
+    margin: 10px 0;
+    color:white;
+
+}
+.product-container input[type="submit"] {
+    margin: 10px 0;
+    background-color: #4CAF50;
+}
+
+.product-container input[type="submit"]:hover {
+    margin: 10px 0;
+    background-color: darkgreen;
+}
+
+img:hover {
+    transform: scale(1.1, 1.1); /*Añade animación a la imagen*/
+    transition: transform 0.2s ease-in-out; 
+}

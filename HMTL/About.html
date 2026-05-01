@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>CosasInútilesSL</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/mystyle.css">
+	</head>
+
+<header>
+    <h1>About us</h1>
+</header>
+<body onload="inicializarModoOscuro()">
+    <div class="background-container">
+
+        <img src="../Image/backgroundDay.jpg" alt="Background">
+    </div>
+    <div>
+        <a href="index.html" id="home">Home</a>
+    
+    <fieldset>
+    <legend>Who are we?</legend>
+
+        <div>
+                    <h2> About us </h2>
+                    <p>
+                        Welcome to Cosas Inútiles S.L., your trusted store for everything you don't need.<br>
+                        We proudly sell absurd items, pointless contraptions, and gadgets so ridiculous that if you use them in public, there’s a solid chance you’ll end up in someone’s WhatsApp group chat — and not in a good way.
+                    </p>                    
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>What do we sell?</legend>
+
+            <div>
+                <h2> Our products </h2>
+                <p>
+                    From can openers with a built-in flashlights, to croqueta-shaped cushions,
+                    or alarms that screams insults to wake you up...<br>
+                    Here you won't find utility, but you will find fun, originality and a bit of good old embarrassment.<br>
+                    Because in this life there is already too much logic,
+                    and we bring the chaos that's missing with glorious junk that's good for nothing.<br>
+                    Cosas Inútiles S.L.! If it serves no purpose, we'll probably have it with a discount.
+                </p>
+            </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Our growth</legend>
+
+        <div>
+            <h2>The Bright future</h2>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th colspan="2">Year</th>
+                        <th>Milestone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">2023</td>
+                        <td>Q1</td>
+                        <td>Launched our Solar Charger</td>
+                    </tr>
+                    <tr>
+                        <td>Q2</td>
+                        <td>The Solar Charger for interiors receives "The most absurd" award</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">2024</td>
+                        <td>Reached 10,000 customers</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2025</td>
+                        <td>Q3</td>
+                        <td>Expanded to international markets</td>
+                    </tr>
+                    <tr>
+                        <td>Q4</td>
+                        <td>Now, we start testing our products</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+
+
+    <div class="formulario-pedido">
+        <h2>Details of your Inútil product</h2>
+        <form name="pedidoInutil">
+
+            <label for="cantidadProd">Products to buy: </label>
+            <input type="number" id="cantidadProd" oninput="mostrarEntero(this.id, 'resultadoCantidad')" />
+            <div id="resultadoCantidad" class="dato-unidad"></div>
+    
+  
+            <label for="pesoTotal">Total weight ( in KG, not in Kbs):</label>
+            <input type="number" id="pesoTotal" oninput="mostrarDecimal(this.id, 'resultadoPeso')" />
+            <div id="resultadoPeso" class="dato-peso"></div>
+    
+  
+            <label for="precioUnidad">Price for the products (yes, it costs money, we are not an ONG):</label>
+   
+            <input type="number" id="precioUnidad" oninput="mostrarPrecio(this.id, 'resultadoPrecio')">
+            <div id="resultadoPrecio" class="dato-precio"></div>
+
+
+            <label for="fechaPedido"> Date for the delivery:</label>
+
+            <input type="date" id="fechaPedido" oninput="mostrarFecha(this.id, 'resultadoFechaPedido')">
+            <div id="resultadoFechaPedido" class="resultado-fecha"></div>
+
+            <input type="button" value="Calculate" onclick="procesarPedido('cantidadProd','pesoTotal','precioUnidad','pesoIndividual','precioFinal','fechaEnvio')" class="calcButton">
+        </form>
+    </div>
+    
+    <div class="resumenFinal">
+        <h3> Summary of the bankrupt</h3>
+        <p>
+            Individual weight for each product: 
+            <div id="pesoIndividual" class="resultadoPeso"></div>
+        </p>
+        <p>
+             Total cost of this nonsense: 
+            <div id="precioFinal" class="resultadoPrecio"></div></p>
+        <p>
+            You'll receive the product more or less by: 
+            <div id="fechaEnvio" class="resultadoFecha"></div>
+        </p>
+    </div>
+
+    <fieldset >
+        <legend>Our Team</legend>
+            <div class="team">
+                <ol>
+                    <li><h5>Óscar Martínez Bernedo</h5></li>
+                    <li>
+                        The AIs:
+                        <ul>
+                            <li>DeepSeek</li>
+                            <li>Copilot</li>
+                            <li>Gemini</li>
+                            <li>Llama</li>
+                            <li>DeepL</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+
+                <p>Special mention:</p>
+                <div class="SpecialMentionText">
+                    <p>
+                        He is the one who has put the most effort into this project,
+                        and he is the one who has done the most work and helped with the
+                        with difficult functions such as: <br>
+                        
+                        <code>
+                            if (a&lt;b)<br>
+                                return a;<br>
+                            else<br>
+                                return b;
+                        </code>
+                    </p>
+                </div>
+                <div class="SpecialMention">
+                    <h5>-ChatGPT</h5>
+                </div>
+            </div>  
+    </fieldset>
+    </body>
+
+    <footer>
+ 
+        <a href="mailto:info@cosasinutiles.com?subject=Inquiry&bodyHello, I have a question about your products." >
+            Send us an email
+        </a>
+        <a href="About_es.html"> See this web page in Spanish </a>
+        <p>&copy; Home of the Book</p>
+    </footer>
+
+    <script defer src="../JavaScript/darkMode.js"></script>
+    <script defer src="../JavaScript/Il8n.js"></script>
+    <script type="text/javascript">
+        var MyLocale='es-ES';
+        /*ReqI2*/ /*ReqI3*/ /*ReqI4*/ /*ReqI5*/
+        numberFormat= Intl.NumberFormat(MyLocale,{maximumFractionDigits:3});
+        integerFormat = Intl.NumberFormat(MyLocale,{maximumFractionDigits:0});
+        currencyFormat= Intl.NumberFormat(MyLocale,{style:'currency',currency:'GBP'});
+        dateFormat= Intl.DateTimeFormat(MyLocale,{dateStyle:'full'});
+    </script>
+</html>

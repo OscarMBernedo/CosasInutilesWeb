@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../CSS/mystyle.css">
+    <link rel="stylesheet" href="../CSS/exerciseBooksStyle.css">
+
+</head>
+<header>
+	<h1>Book Collection</h1>
+</header>
+<body onload="inicializarModoOscuro()">
+    <div class="background-container">
+        <img src="../Image/backgroundDay.jpg" alt="Background">
+    </div>
+    <a href="index.html" id="home">Home</a>
+    <div class="products-list">
+
+        <!-- First product -->
+            <div class="product-container">
+                <img src='' alt='No img'>
+                <h2>Sudoku Toilet Paper</h2>
+                <p>
+                    For those who wants to develop problem-solving skills
+                    under pressure.<br>
+                    Every sheet is a new challenge to show that you are 
+                    the best at Sudoku.<br>
+                    Not recommnded for public use.
+                </p>
+                <h2 id="Promo1">
+                    79.99€
+                </h2>
+             
+                <form id="productForm1">
+                    <input type="number" id="Q1" min="1" value="1">
+                    <input type="submit" value="Add to cart" id="Product1" onclick="sendProduct('Product1', 'Q1')">
+                    
+                   
+                    <input type="text" id="P1" value="10%Off">
+                    <button type="button" onclick="promoCode('Product1', 'Promo1', 'P1')">
+                        Add PromoCode
+                    </button>
+                    <button type="button" onclick="addToCollection('Product1', 'Q1')">
+                        Add To Collection
+                    </button>
+                </form>
+            </div>
+
+
+        <!-- Second product -->
+
+        <div class="product-container">
+            <img src='' alt='No img'>
+            <h2>Solar Charger for interiors</h2>
+            <p>
+                Works as well as a it sounds. A slow but sure charging option<br>
+                Because science is making tremendous progress this days.
+            </p>
+            <h2 id="Promo2">
+                79.99€
+            </h2>
+       
+            <form id="productForm2">
+                <input type="number" id="Q2" min="1" value="1">
+                <input type="submit" value="Add to cart" id="Product2" onclick="sendProduct('Product2', 'Q2')">
+                
+         
+                <input type="text" id="P2" value="20%Off">
+                <button type="button" onclick="promoCode('Product2', 'Promo2', 'P2')">
+                    Add PromoCode
+                </button>
+                <button type="button" onclick="addToCollection('Product2', 'Q2')">
+                    Add To Collection
+                </button>
+            </form>
+        </div>
+
+
+        <!-- Third product -->
+
+        <div class="product-container">
+            <img src='' alt='No img'>
+            <h2>Napkins with passive-aggressive phrases</h2>
+
+            <p>
+                Tired of swallowing your thoughts while someone repeats themselves for the third time?<br>
+                Not everything can be cleaned with Fairy: these napkins clean stains and also shuts mouths. <br>
+
+            </p>
+            <h2 id="Promo3">
+                79.99€
+            </h2>
+         
+            <form id="productForm3">
+                <input type="number" id="Q3" min="1" value="1">
+                <input type="submit" value="Add to cart" id="Product3" onclick="sendProduct('Product3', 'Q3')">
+                
+         
+                <input type="text" id="P3" value="10%Off">
+                <button type="button" onclick="promoCode('Product3', 'Promo3', 'P3')">
+                    Add PromoCode
+                </button>
+                <button type="button" onclick="addToCollection('Product3', 'Q3')">
+                    Add To Collection
+                </button>
+            </form>
+        </div>
+
+
+        <!-- Fourth product -->
+    
+        <div class="product-container">
+            <img src='' alt='No img'>
+            <h2>Pen with Flashlight and knife</h2>
+            <p>
+                To write, illuminate and cut chorizo at the same time
+            </p>
+            <h2 id="Promo4">
+                59.99€
+            </h2>
+            
+            <form id="productForm4">
+                <input type="number" id="Q4" min="1" value="1">
+                <input type="submit" value="Add to cart" id="Product4" onclick="sendProduct('Product4', 'Q4')">
+                
+               
+                <input type="text" id="P4" value="30%Off">
+                <button type="button" onclick="promoCode('Product4', 'Promo4', 'P4')">
+                    Add PromoCode
+                </button>
+                <button type="button" onclick="addToCollection('Product4', 'Q4')">
+                    Add To Collection
+                </button>
+            </form>
+        </div>
+
+
+    </div>
+    <div id="Collection">
+        <h3>Your Collection</h3>
+			<button type="button" onclick="document.getElementById('BookList').style.display='none'">
+                Hide Collection
+            </button>
+			
+            <p>
+				Here are the Inútil products you've added to your collection:
+			</p>
+            <ul id="ProdList" style="display: block;">
+				
+            </ul>
+    </div>
+    <script defer src="../JavaScript/cart.js"></script>
+    <script defer src="../JavaScript/darkMode.js"></script>
+    <script defer src="../JavaScript/promoCollection.js"></script>
+
+</body>
+
+</html>

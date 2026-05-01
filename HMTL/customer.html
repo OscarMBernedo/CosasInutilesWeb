@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>CosasInútilesSL</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/mystyle.css">
+	</head>
+
+<header>
+    <h1>Customer</h1>
+</header>
+<body onload="receiveData(); inicializarModoOscuro()">
+    <div class="background-container">
+        <img src="../Image/backgroundDay.jpg" alt="Background">
+    </div>
+    <div>
+        <a href="index.html" id="home">Home</a>
+    </div>  
+    <div class="card">
+        <h2>UserName</h2>
+        <div id="customerName"></div>
+        <h2>Customer Information</h2>
+        <div id="customerInfo"></div>
+        
+    </div>
+
+    <div class="card">
+        <h2>Products</h2>
+        <div>
+            
+            <ul id="cart">
+            </ul>
+        </div>
+    </div>
+    
+    <div>
+        <button id="clearCart" onclick="clearInfo()">Clear Info</button>
+        
+    </div>
+
+</body>
+<footer></footer>
+    <script defer src="../JavaScript/darkMode.js"></script>
+    <script defer src="../JavaScript/customer.js"></script>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>CosasInútilesSL</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/mystyle.css">
+	</head>
+
+<header>
+    <h1>Login</h1>
+</header>
+<body onload="inicializarModoOscuro()">
+    <div class="background-container">
+        <img src="../Image/backgroundDay.jpg" alt="Background">
+    </div>
+    <div>
+        <a href="index.html" id="home">Home</a>
+    </div>  
+
+    <form id="customerForm" name="loginForm" onsubmit="return sendData();" autocomplete="off">
+
+        <div class="form-grid">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>                   
+                <input type="tel" id="phone" name="phone" onblur="validateNum(this.value)" required>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div>
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode">
+            </div>
+            <div>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+      
+            <div>
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+            <div>
+                <label for="profilePicture">Upload your profile picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+            </div>
+            <div>
+                <label for="favoriteColor">Choose your favorite color:</label>
+                <input type="color" id="favoriteColor" name="favoriteColor">
+            </div>
+        </div>
+
+     
+        <fieldset>
+            <legend>Preferred Contact Method</legend>
+            
+            <label for="contactEmail">Email</label>
+            <input type="radio" id="contactEmail" name="contactMethod" value="emailRadio" onclick="checkRadioOption('contactEmail');" checked>
+            
+            <label for="contactPhone">Phone</label>
+            <input type="radio" id="contactPhone" name="contactMethod" value="phoneRadio" onclick="checkRadioOption('contactPhone');">
+        </fieldset>
+
+     
+        <fieldset>
+            <legend>Available hours</legend>
+            
+            <label for="morning">Morning</label>
+            <input type="checkbox" id="morning" name="contactTime" value="morningCheckbox">
+            
+            <label for="afternoon">Afternoon</label>
+            <input type="checkbox" id="afternoon" name="contactTime" value="afternoonCheckbox">
+            
+            <label for="evening">Evening</label>
+            <input type="checkbox" id="evening" name="contactTime" value="eveningCheckbox">
+        </fieldset>
+
+       
+        <fieldset>
+            <legend>Preferred Shipping Method</legend>
+            <label for="shippingMethod">Choose a shipping method:</label>
+            <select id="shippingMethod" name="shippingMethod" required>
+                <option value="default"selected>Select an option</option>
+                <option value="standard">Standard Shipping</option>
+                <option value="express">Express Shipping</option>
+                <option value="pickup">Pickup at Store</option>
+            </select>
+        </fieldset>
+        
+        <button type="button" onmouseup="clearForm()">Clear</button>
+        <button type="button"><input type="submit" value="Submit"></button>
+    </form>
+    
+
+</body>
+   
+    <script defer src="../JavaScript/customer.js"></script>
+    <script defer src="../JavaScript/darkMode.js"></script>
+</html>
